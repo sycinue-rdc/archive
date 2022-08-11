@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g class="layer">
+  <title>Layer 1</title>
+  <use id="svg_4" transform="matrix(1.31518 0 0 1.31046 -11.7418 -8.48157)" x="0.62" xlink:href="#svg_3" y="-0.74"/>
+ </g>
+ <defs>
+  <symbol fill-rule="evenodd" height="24" id="svg_3" stroke-linejoin="round" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+   <g class="layer" id="svg_1">
+    <title>Layer 1</title>
+    <path d="m12.49,21.87l-1.11,-12.37l12.12,0l-1.11,12.37l-4.96,1.37l-4.95,-1.37l0.01,0zm4.46,-3.2l-3.93,-2.36l0,-0.85l3.93,-2.36l0,1.32l-2.51,1.47l2.51,1.47l0,1.32l0,-0.01zm0.98,0l0,-1.32l2.53,-1.47l-2.53,-1.47l0,-1.32l3.93,2.35l0,0.88l-3.93,2.35z" fill="#ff7043" id="svg_2"/>
+   </g>
+  </symbol>
+ </defs>
+</svg>

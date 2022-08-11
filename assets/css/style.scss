@@ -1,0 +1,193 @@
+*,*::after,*::before {
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+// Default Conf.
+
+h1 {
+    margin: .67em 0;
+    padding: 10px 0;
+}
+
+body {
+    background: #1e1f25;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+    header {
+
+        h1 {
+            color: rgba(255, 255, 255, 0.7);
+            word-wrap: break-word;
+            pointer-events: none;
+        }
+        hr {
+            margin-top: -10px;
+        }
+    }
+
+    .selection {
+        margin: 30px 0;
+
+        ul {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.5);
+                transition: color 1s ease;
+                word-wrap: break-word;
+            }
+            a:hover {
+                color: white;
+            }
+
+            // Special Section
+
+            .unavailable {
+                text-decoration: line-through;
+                color: crimson;
+            }
+
+            .unavailable:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+
+
+// folder icons
+
+.ico {
+    height: 30px;
+    float: left;
+    margin: -7px 5px 0 0;
+}
+
+a:hover  {
+    img.folder-ico {
+        content: url('../icons/folder-open.svg');
+    }
+
+    img.back-ico {
+        content: url('../icons/folder-open.svg');
+    }
+
+    img.mobile-ico {
+        content: url('../icons/folder-mobile-open.svg');
+    }
+
+    img.computer-ico {
+        content: url('../icons/folder-laptop-open.svg');
+    }
+
+    img.software-ico {
+        content: url('../icons/folder-content-open.svg');
+    }
+
+    img.school-ico {
+        content: url('../icons/folder-school-open.svg');
+    }
+
+    img.android-ico {
+        content: url('../icons/folder-android-open.svg');
+    }
+
+    img.driver-ico {
+        content: url('../icons/folder-driver-open.svg');
+    }
+
+    img.windows-ico {
+        content: url('../icons/folder-windows-open.svg');
+    }
+
+    img.phoenix-ico {
+        content: url('../icons/folder-phoenix_os-open.svg');
+    }
+
+    img.leak-ico {
+        content: url('../icons/folder-web-leak-open.svg');
+    }
+
+    img.university-ico {
+        content: url('../icons/folder-university-open.svg');
+    }
+
+    img.activity-ico {
+        content: url('../icons/folder-activity-open.svg');
+    }
+
+    img.assignment-ico {
+        content: url('../icons/folder-assignment-open.svg');
+    }
+
+    img.exam-ico {
+        content: url('../icons/folder-exam-open.svg');
+    }
+
+    img.quiz-ico {
+        content: url('../icons/folder-quiz-open.svg');
+    }
+
+    img.work-ico {
+        content: url('../icons/folder-work-open.svg');
+    }
+
+    img.views-ico {
+        content: url('../icons/folder-views-open.svg');
+    }
+
+    img.img-ico {
+        content: url('../icons/folder-images-open.svg');
+    }
+
+    img.css-ico {
+        content: url('../icons/folder-css-open.svg');
+    }
+
+    img.download-ico {
+        content: url('../icons/folder-download-open.svg');
+    }
+
+    img.font-ico {
+        content: url('../icons/folder-font-open.svg');
+    }
+
+    img.resource-ico {
+        content: url('../icons/folder-resource-open.svg');
+    }
+
+    img.js-ico {
+        content: url('../icons/folder-javascript-open.svg');
+    }
+
+    img.html-ico {
+        content: url('../icons/folder-html-open.svg');
+    }
+}
+
+// Footer Conf.
+
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.100);
+    z-index: -100;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+}
+
+footer::after {
+    content: '© 2022 sycinue-rdc archive v5 alpha';
+    font-size: 14px;
+}

@@ -131,6 +131,12 @@ a:hover img.js-ico {
 a:hover img.html-ico {
   content: url("../icons/folder-html-open.svg");
 }
+a:hover img.video-ico {
+  content: url("../icons/folder-video-open.svg");
+}
+a:hover img.sass-ico {
+  content: url("../icons/folder-sass-open.svg");
+}
 
 footer {
   text-align: center;

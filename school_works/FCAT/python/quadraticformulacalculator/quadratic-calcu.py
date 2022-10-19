@@ -1,7 +1,5 @@
-# Basic Quadratic Formula Calculator
-# Self Study Proj. #4
-# Copyright (c) Dalumpines, Eunicys S.
-# Revised Copy [Submitted to Prof. Manny Bernabe]
+# Quadratic Formula Calculator
+# Submitted by Dalumpines, Eunicys Sanchez
 # BSCS-1 (Fundamentals to Programming) [10/16/2022]
 
 ### - - - Assignment For Lec #3 Discussion - - - ###
@@ -41,38 +39,3 @@ else :
     print("X1 =",x1)
     x2 = (-b-d**(0.5))/(2*a)
     print("X2 =",x2,"\n")
-
-
-### - - -  IGNORE THE FOLLOWING LINES - - - ###
-## - - Self Study Proj. Experimental #4 - - ##
-#
-#sim1 = -4 * a *c
-#sim2 = b ** 2
-#sim3 = -1 * b
-#sim4 = 2 * a
-#
-#if sim1 > 0 :
-#    sol1 = sim1 + sim2
-#    sol2 = sol1 ** 0.5
-#
-#    s1x1 = sim3 + sol2
-#    s2x1 = s1x1 / sim4
-#
-#    s1x2 = sim3 - sol2
-#    s2x2 = s1x2 / sim4
-#
-#    print("\nx1 = " + str(s2x1))
-#    print("x2 = " + str(s2x2))
-#
-#else :
-#    sol1 = sim1 - sim2
-#    sol2 = sol1 ** 0.5
-#
-#    s1x1 = sim3 + sol2
-#    s2x1 = s1x1 / sim4
-#
-#    s1x2 = sim3 - sol2
-#    s2x2 = s1x2 / sim4
-#
-#    print("\nx1 = " + str(s2x1))
-#    print("x2 = " + str(s2x2))

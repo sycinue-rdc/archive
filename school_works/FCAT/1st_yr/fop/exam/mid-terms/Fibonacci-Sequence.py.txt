@@ -1,0 +1,74 @@
+# Mid-terms Examination
+# Question 1 [Fibonacci Sequence]
+# Copyright (C) Dalumpines, Eunicys Sanchez
+
+import os
+
+sel = int(input("Select your device :\n\n[1] Windows 7 - 11\n[2] Mac OS / Linux / Cellphone\n\nEnter a number : "))
+
+if sel == 1:
+    clear = lambda : os.system("cls")
+
+else:
+    clear = lambda : os.system("clear")
+
+clear()
+
+while True:
+    print(" ===================================================")
+    print("|               MID-TERMS EXAMINATION               |")
+    print("|                      BSCS-1                       |")
+    print("|                Fibonacci Sequence                 |")
+    print(" ===================================================")
+    limiter = int(input("Set a Limit : "))
+
+    if limiter > 0:
+        break
+
+    else:
+        clear()
+        print("ERROR : Limit value must be grater than 0!")
+clear ()
+
+print(" ===================================================")
+print("|               MID-TERMS EXAMINATION               |")
+print("|                      BSCS-1                       |")
+print("|                Fibonacci Sequence                 |")
+print(" ===================================================")
+print("\nEntered Limit Value " + str(limiter))
+
+if limiter == 1:
+    print("\nAnswer = 0\n")
+    quit()
+    
+if limiter < 4:
+    print("\nAnswer = 1\n")
+    quit()
+
+if limiter == 4:
+    print("\nAnswer = 2\n")
+    quit()
+
+if limiter == 5:
+    print("\nAnswer = 3\n")
+    quit()
+
+
+for x in range(limiter):
+    limiter = limiter - 3
+    var = 1 + 1
+    val = var + 1
+    var = val + var
+
+    if var == 5:
+        r = val
+        val = var
+        limiter = limiter - 3
+
+        for x in range(limiter):
+            var = val + r
+            r = val
+            val = var
+
+        print("\nAnswer =",var,"\n")
+        break

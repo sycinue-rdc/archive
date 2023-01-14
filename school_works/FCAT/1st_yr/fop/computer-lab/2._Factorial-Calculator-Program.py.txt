@@ -1,0 +1,32 @@
+# Computer Laboratory 2
+# Factorial Calculator Program
+# Copyright (c) Dalumpines, Eunicys S.
+# [Submitted to Prof. Manny Bernabe]
+# BSCS-1 (Fundamentals to Programming) [27/10/2022]
+
+import os
+clear = lambda : os.system ("cls")
+clear()
+
+print("Factorial Calculator Program Using the While Statement/Loops")
+
+integer = int(input("\nEnter a Value : "))
+
+factorial = integer
+
+if integer < 0:
+    print("\nInvalid Input...\n")
+
+elif integer == 0:
+    print("\nThe factorial of 0 is 1\n")
+
+else:
+    counter = integer
+
+    while counter > 1:
+        counter = counter - 1
+        factorial = factorial * counter
+
+        #print("\n" + str(integer) + " x " + str(counter) + " = " + str(factorial))
+
+    print("\nThe factorial of",integer,"is",factorial,"\n")

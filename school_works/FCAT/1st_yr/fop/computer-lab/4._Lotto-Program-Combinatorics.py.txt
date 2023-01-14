@@ -1,0 +1,27 @@
+# Computer Laboratory 4
+# Lotto Program [Combinatorics]
+# Copyright (c) Dalumpines, Eunicys S.
+# [Submitted to Prof. Manny Bernabe]
+# BSCS-1 (Fundamentals to Programming)
+
+def factorial (counter):
+    fact = 1
+
+    if counter == 0:
+        return(fact)
+
+    else:
+        integer = 1
+
+        while integer < counter:
+            integer += 1
+            fact *= integer
+        return(fact)
+
+print("Lotto Program [Combinatorics]")
+tballs = int(input("\nEnter Total Balls : "))
+dballs = int(input("\nEnter Drawn Balls : "))
+
+combination = factorial(tballs)/factorial(dballs)/factorial(tballs-dballs)
+
+print("\nThere are",combination,"combinations for the",dballs,"/",tballs,"lotto.\n")

@@ -1,0 +1,36 @@
+# Mid-terms Examination
+# Question 2 [Factorial Program (MOD)]
+# Copyright (C) Dalumpines, Eunicys Sanchez
+
+import os
+
+sel = int(input("Select your device :\n\n[1] Windows 7 - 11\n[2] Mac OS / Linux / Cellphone\n\nEnter a number : "))
+
+if sel == 1:
+    clear = lambda : os.system("cls")
+    
+else:
+    clear = lambda : os.system("clear")
+
+clear()
+
+print(" ===================================================")
+print("|               MID-TERMS EXAMINATION               |")
+print("|                      BSCS-1                       |")
+print("|              Factorial Program (MOD)              |")
+print(" ===================================================")
+
+limit = int(input("Enter Limit : "))
+
+Y1 = 0
+
+if limit > 1:
+    for i in range(limit):
+        Y1 = Y1 + (1/(i+1)**2)
+
+Y2 = 6 * Y1
+Answer = Y2 ** (1/2)
+
+print("\nY1 Value :",Y1)
+print("Y2 Value :",Y2)
+print("\nAnswer =",Answer)

@@ -1,0 +1,29 @@
+# Computer Laboratory 3
+# Factorial Calculator Program [MOD]
+# Copyright (c) Dalumpines, Eunicys S.
+# [Submitted to Prof. Manny Bernabe]
+# BSCS-1 (Fundamentals to Programming)
+
+def factorial (counter):
+    fact = 1
+
+    if counter == 0:
+        return(fact)
+
+    else:
+        integer = 1
+
+        while integer < counter:
+            integer += 1
+            fact *= integer
+        return(fact)
+
+value = int(input("\nEnter a Value : "))
+
+if value < 0:
+    print("\nInvalid Input...\n")
+
+else:
+    output = factorial(value)
+
+    print("\nThe factorial of",value,"is",output,"\n")

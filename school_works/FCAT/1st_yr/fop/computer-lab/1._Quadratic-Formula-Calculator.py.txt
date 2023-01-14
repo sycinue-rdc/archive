@@ -1,5 +1,7 @@
-# Quadratic Formula Calculator
-# Submitted by Dalumpines, Eunicys Sanchez
+# Computer Laboratory 1
+# Basic Quadratic Formula Calculator
+# Copyright (c) Dalumpines, Eunicys S.
+# [Submitted to Prof. Manny Bernabe]
 # BSCS-1 (Fundamentals to Programming) [10/16/2022]
 
 ### - - - Assignment For Lec #3 Discussion - - - ###
@@ -20,7 +22,7 @@ if d == 0 :
     print("\nThere is one real root.")
 
     x = -b/(2*a)
-    print("X = ",x)
+    print("X =",x)
 
 elif d > 0 :
     print("\nThere are two real roots.\n")

@@ -49,6 +49,12 @@ body {
 .container .selection ul .unavailable:hover {
   color: red;
 }
+.container .selection ul .list-title {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 20px;
+}
 
 .ico {
   height: 30px;

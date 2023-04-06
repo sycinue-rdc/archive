@@ -1,0 +1,412 @@
+# Computer Laboratory 2 (2nd Semester)
+# My Nested Menu - [Revision 2.0]
+# Copyright (c) Dalumpines, Eunicys S.
+# [Submitted to Prof. Manny Bernabe]
+# BSCS-1 (Intermediate Programming) [04/05/2023]
+
+#######################################################
+##                    CHANGE-LOG                     ##
+#######################################################
+## Added Universal Set string of (1-20)              ##
+## Added Operation naming variable for display       ##
+## (I/O Reset Set C) entry removed                   ##
+## (Display) Set C & Universal Set entry Added       ##
+#######################################################
+
+import os
+clear = lambda: os.system("cls")
+
+# Set's Initialization...
+setA = {"1","2","3","4","5","6"}
+setB = {"2","4","6","8","10"}
+setC = {}
+setU = ("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20")
+## reset option to reset set A & B from start-up
+# setA.clear()
+# setB.clear()
+# setC.clear()
+
+# Operation Naming Variable
+disname = "default"
+
+while True:
+    # Set C Start-up Configuration
+    if len(setA) == 0:
+        setC = {}
+    elif len(setB) == 0:
+        setC = {}
+
+    clear()
+
+    print("Nested Menu - [Revised]")
+    print("Submitted By : Eunicys S. Dalumpines\n")
+    
+    print("1 : I/O")
+    print("2 : Operations")
+    print("3 : Display")
+    print("Q : Quit")
+
+    selection = input("\nSelect an Option : ")
+
+    if selection == "1":
+        while True:
+            # This will automatic reset set c whenever we entered [I/O Menu]
+            setC = {}
+
+            clear()
+
+            print("I/O Menu\n")
+
+            print("1 : Input Set A")
+            print("2 : Input Set B")
+
+            ### (I/O Reset Set C) entry removed ###
+            # print("3 : Reset Set C")
+
+            print("Q : Back to main menu")
+
+            selection1 = input("\nSelect an Option : ")
+
+            if selection1 == "1":
+                while True:
+                    clear()
+
+                    print("Input Set A")
+                    print("\n[COMMANDS]\nclear : remove all items from set\nremove : remove specific item from set\n")
+
+                    if len(setA) >= 1:
+                        print(setA)
+
+                    additm = input("\nEnter Item Name for Set A (Type done to finish): ")
+
+                    if additm == "clear":
+                        if len(setA) >= 1:
+                            while True:
+                                clear()
+
+                                print("Remove all items from set A")
+
+                                notif = input("\nAre you sure you want to remove all items from set A? (Y|N): ")
+
+                                if notif == "Y":
+                                    setA.clear()
+                                    break
+
+                                elif notif == "N":
+                                    break
+
+                                else:
+                                    clear()
+
+                        else:
+                            clear()
+                            input("Set A is already empty")
+                        
+                    elif additm == "remove":
+                        if len(setA) >= 1:
+                            while True:
+                                clear()
+
+                                print("Remove Item from Set\n")
+
+                                print(setA)
+
+                                delitm = input("\nEnter an item name you want to remove from set A (Type done to finish): ")
+
+                                if delitm == "":
+                                    clear()
+
+                                elif delitm in setA:
+                                    setA.discard(delitm)
+
+                                elif delitm == "done":
+                                    break
+
+                                else:
+                                    clear()
+                                    input("Can't remove item. Item not found...")
+
+                        else:
+                            clear()
+                            input("Set A is empty")
+
+                    elif additm == "done":
+                        break
+
+                    elif additm == "":
+                        clear()
+
+                    elif additm in setA:
+                        clear()
+                        input("Can't add item. Item already in the set A...")
+
+                    elif additm not in setU:
+                        clear()
+                        input("Can't add item. Item not found from Universal Set list of items...")
+
+                    elif additm not in setA:
+                        setA.add(additm)
+
+            if selection1 == "2":
+                while True:
+                    clear()
+
+                    print("Input Set B")
+                    print("\n[COMMANDS]\nclear : remove all items from set\nremove : remove specific item from set\n")
+
+                    if len(setB) >= 1:
+                        print(setB)
+
+                    additm = input("\nEnter Item Name for Set B (Type done to finish): ")
+
+                    if additm == "clear":
+                        if len(setB) >= 1:
+                            while True:
+                                clear()
+
+                                print("Remove all items from set B")
+
+                                notif = input("\nAre you sure you want to remove all items from set B? (Y|N): ")
+
+                                if notif == "Y":
+                                    setB.clear()
+                                    break
+
+                                elif notif == "N":
+                                    break
+
+                                else:
+                                    clear()
+
+                        else:
+                            clear()
+                            input("Set B is already empty")
+                        
+                    elif additm == "remove":
+                        if len(setB) >= 1:
+                            while True:
+                                clear()
+
+                                print("Remove Item from Set\n")
+
+                                print(setB)
+
+                                delitm = input("\nEnter an item name you want to remove from set B (Type done to finish): ")
+
+                                if delitm == "":
+                                    clear()
+
+                                elif delitm in setB:
+                                    setB.discard(delitm)
+
+                                elif delitm == "done":
+                                    break
+
+                                else:
+                                    clear()
+                                    input("Can't remove item. Item not found...")
+
+                        else:
+                            clear()
+                            input("Set B is empty")
+
+                    elif additm == "done":
+                        break
+
+                    elif additm == "":
+                        clear()
+
+                    elif additm in setB:
+                        clear()
+                        input("Can't add item. Item already in the set B...")
+
+                    elif additm not in setU:
+                        clear()
+                        input("Can't add item. Item not found from Universal Set list of items...")
+
+                    elif additm not in setB:
+                        setB.add(additm)
+
+            ### (I/O Reset Set C) entry removed ###
+            # if selection1 == "3":
+            #     if len(setC) <= 0:
+            #         clear()
+            #         input("Set C is already in default state.")
+
+            #     else:
+            #         clear()
+            #         setC = {}
+            #         input("Set C items successfully removed. Press enter to continue...")
+
+            if selection1 == "Q":
+                break
+
+    elif selection == "2":
+        if len(setA) and len(setB) >= 1:
+            while True:
+                clear()
+
+                print("Operations Menu\n")
+
+                print("1 : A Union B")
+                print("2 : A Intersect B")
+                print("3 : A - B")
+                print("Q : Back to main menu")
+
+                selection2 = input("\nSelect an Option : ")
+
+                if selection2 == "1":
+                    disname = "A Union B"
+                    if len(setA) and len(setB) >= 1:
+                        setC = setA.union(setB)
+                        break
+
+                    else:
+                        input("Must enter Set A/B values first to continue...")
+                        break
+
+                if selection2 == "2":
+                    disname = "A Intersect B"
+                    if len(setA) and len(setB) >= 1:
+                        setC = setA.intersection(setB)
+                        break
+
+                    else:
+                        input("Must enter Set A/B values first to continue...")
+                        break
+
+                if selection2 == "3":
+                    disname = "A - B"
+                    if len(setA) and len(setB) >= 1:
+                        setC = setA.difference(setB)
+                        break
+
+                    else:
+                        input("Must enter Set A/B values first to continue...")
+                        break
+
+                if selection2 == "Q":
+                    break
+
+        else:
+            clear()
+            input("Must enter Set A/B values first to continue...")
+
+    elif selection == "3":
+        ### (Display) Set A & Set B display option ###
+        # clear()
+        # if len(setA) and len(setB) and len(setC) >= 1:
+        #     n = 1
+        #     while n <= len(setA):
+        #         n = 1
+        #         print("Set A list:")
+        #         for x in setA:
+        #             print("("+str(n)+") - "+str(x))
+        #             n = n+1
+        #     n = 1
+        #     while n <= len(setB):
+        #         n = 1
+        #         print("\nSet B list:")
+        #         for x in setB:
+        #             print("("+str(n)+") - "+str(x))
+        #             n = n+1
+        #     n = 1
+        #     while n <= len(setC):
+        #         n = 1
+        #         print("\nSet C list:")
+        #         for x in setC:
+        #             print("("+str(n)+") - "+str(x))
+        #             n = n+1
+
+        # elif len(setA) and len(setB) >= 1:
+        #     n = 1
+        #     while n <= len(setA):
+        #         n = 1
+        #         print("Set A list:")
+        #         for x in setA:
+        #             print("("+str(n)+") - "+str(x))
+        #             n = n+1
+        #     n = 1
+        #     while n <= len(setB):
+        #         n = 1
+        #         print("\nSet B list:")
+        #         for x in setB:
+        #             print("("+str(n)+") - "+str(x))
+        #             n = n+1
+       
+        # elif len(setA) >= 1:
+        #     n = 1
+        #     print("Set A list:")
+        #     for x in setA:
+        #         print("("+str(n)+") - "+str(x))
+        #         n = n+1
+
+        # elif len(setB) >= 1:
+        #     n = 1
+        #     print("Set B list:")
+        #     for x in setB:
+        #         print("("+str(n)+") - "+str(x))
+        #         n = n+1
+
+        # else:
+        #     clear()
+        #     print("Must enter Set A/B values first to continue...")
+
+        # input("\nPress enter to continue...")
+
+
+        ### (Display) Set C & Universal Set entry Added ###
+        while True:
+            clear()
+    
+            print("Display Menu\n")
+
+            print("1 : Display Set C")
+            print("2 : Display Universal Set")
+            print("Q : Back to main menu")
+
+            selection4 = input("\nSelect an Option : ")
+
+            if selection4 == "1":
+                clear()
+                if len(setC) >= 1:
+                    n = 1
+                    print(disname)
+                    print("\nSet C list:")
+                    for x in setC:
+                        print("("+str(n)+") - "+str(x))
+                        n = n+1
+
+                else:
+                    print("Must do an operation first to continue...")
+
+                input("\nPress enter to continue...")
+
+            elif selection4 == "2":
+                clear()
+                n = 1
+                print("Universal Set list:")
+                for x in setU:
+                    print("("+str(n)+") - "+str(x))
+                    n = n+1
+
+                input("\nPress enter to continue...")
+
+            elif selection4 == "Q":
+                break
+
+            else:
+                clear()
+            
+    elif selection == "Q":
+        while True:
+            clear()
+
+            selection3 = input("Are you sure you want to quit? (Y|N): ")
+
+            if selection3 == "Y":
+                print("Bye Bye...")
+                quit()
+
+            elif selection3 == "N":
+                break

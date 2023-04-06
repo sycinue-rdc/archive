@@ -1,0 +1,172 @@
+# Computer Laboratory 1 (2nd Semester)
+# My Sets
+# Copyright (c) Dalumpines, Eunicys S.
+# [Submitted to Prof. Manny Bernabe]
+# BSCS-1 (Intermediate Programming) [03/27/2023]
+
+import os
+clear = lambda : os.system("cls")
+clear()
+
+mysets = {"samsung"}
+
+while True:
+    print("My Sets of Cellphone Brands")
+    print("Submitted by : Eunicys S. Dalumpines\n")
+    print("A - Add Element")
+    print("B - Remove Element")
+    print("C - Count Element")
+    print("D - Search Element")
+    print("E - List Set")
+    print("Q - Quit")
+
+    sel = input("\nSelect an Option : ")
+    clear()
+    
+    if sel == "A":
+        print("You Selected Add Element\n")
+        print(mysets)
+        NE = input("\nAdd your Element Here : ")
+        if NE in mysets:
+            print("\nElement already in the set")
+        else:
+            mysets.add(NE)
+            print()
+            print(mysets)
+        input("\nPress Enter to Continue...")
+        clear()
+
+    elif sel == "a":
+        print("You Selected Add Element\n")
+        print(mysets)
+        NE = input("\nAdd your Element Here : ")
+        if NE in mysets:
+            print("\nElement already in the set")
+        else:
+            mysets.add(NE)
+            print()
+            print(mysets)
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "B":
+        print("You Selected Remove Element")
+        print(mysets)
+        RE = input("\nEnter the name of element you want to remove : ")
+
+        if RE in mysets:
+            mysets.remove(RE)
+            print(mysets)
+
+    if sel == "b":
+        print("You Selected Remove Element")
+        print(mysets)
+        RE = input("\nEnter the name of element you want to remove : ")
+
+        if RE in mysets:
+            mysets.remove(RE)
+            print(mysets)
+
+        else:
+            print("\nCan't remove "+str(RE)+". "+str(RE)+" not found.")
+
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "C":
+        print("You Selected Count Element")
+        print("\nThere are",len(mysets),"elements inside the set")
+        input("\nPress Enter to Continue...")
+        clear()
+
+    elif sel == "c":
+        print("You Selected Count Element")
+        print("\nThere are",len(mysets),"elements inside the set")
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "D":
+        print("You Selected Search Element")
+
+        SE = input("\nEnter the name of the Element : ")
+
+        if SE in mysets:
+            print()
+            print(SE,"found in the set")
+        else:
+            print()
+            print(SE,"not found.")
+
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "d":
+        print("You Selected Search Element")
+
+        SE = input("\nEnter the name of the Element : ")
+
+        if SE in mysets:
+            print()
+            print(SE,"found in the set")
+        else:
+            print()
+            print(SE,"not found.")
+
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "E":
+        print("List of all Items in the Set")
+        print(mysets)
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "e":
+        print("List of all Items in the Set")
+        print(mysets)
+        input("\nPress Enter to Continue...")
+        clear()
+
+    if sel == "Q":
+        print("Are you sure you want to quit?")
+        ans = input("Y | N : ")
+
+        if ans == "Y":
+            clear()
+            print("Bye Bye...")
+            exit()
+        
+        elif ans == "N":
+            input("\nPress enter to return to menu...")
+            clear()
+
+        if ans == "y":
+            clear()
+            print("Bye Bye...")
+            exit()
+        
+        elif ans == "n":
+            input("\nPress enter to return to menu...")
+            clear()
+
+    if sel == "q":
+        print("Are you sure you want to quit?")
+        ans = input("Y | N : ")
+
+        if ans == "Y":
+            clear()
+            print("Bye Bye...")
+            exit()
+        
+        elif ans == "N":
+            input("\nPress enter to return to menu...")
+            clear()
+
+        if ans == "y":
+            clear()
+            print("Bye Bye...")
+            exit()
+        
+        elif ans == "n":
+            input("\nPress enter to return to menu...")
+            clear()
